@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — VedSAAS • Shastra-Augmented AI</title>
+  <link rel="icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/ved.css" />
+  <meta name="description" content="VedSAAS — an Indian, Shastra-Augmented AI ecosystem. Multi-engine, self-learning, multilingual, Bharat-first." />
+
+  <!-- Social preview (optional) -->
+  <meta property="og:title" content="VedSAAS — Shastra-Augmented AI System" />
+  <meta property="og:description" content="An Indian AI ecosystem joining Vedic knowledge and modern AI. Multi-engine, self-learning, multilingual." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://console.vedsaas.com/about.html" />
+  <meta property="og:image" content="https://console.vedsaas.com/assets/og_banner.png" />
+
+  <script type="module">
+    import { ready, include } from "/ved.js";
+    ready(()=>{ include("#site-header","/header.html"); include("#site-footer","/footer.html"); });
+  </script>
+
+  <style>
+    /* a little enhancement for this page only */
+    .subnav { display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin:12px 0 0 }
+    .subnav a { padding:6px 10px; border:1px solid var(--border); border-radius:999px; color:#cfe3ff; background:rgba(77,107,255,.08) }
+    .table { width:100%; border-collapse: collapse; }
+    .table th, .table td { padding:10px 12px; border:1px solid var(--border); text-align:left; }
+    .pill { display:inline-block; padding:4px 8px; border:1px solid var(--border); border-radius:999px; background:rgba(157,177,255,.1) }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  </style>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header id="site-header"></header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <span class="badge">Shastra-Augmented Intelligence</span>
+    <h1>About VedSAAS</h1>
+    <p>Indian AI ecosystem jo Bharat ke gyaan, shastra aur modern AI ko jodta hai — multi-engine, self-learning, multilingual.</p>
+    <div class="subnav">
+      <a href="#overview">Overview</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#knowledge">Knowledge System</a>
+      <a href="#modules">Modules</a>
+      <a href="#infra">Infrastructure</a>
+      <a href="#features">Unique Features</a>
+      <a href="#vision">Vision</a>
+    </div>
+    <p style="margin-top:14px">
+      <a class="btn" href="https://app.vedsaas.com/login.html">Open App →</a>
+      <a class="btn alt" href="/">Home</a>
+    </p>
+  </section>
+
+  <!-- Overview -->
+  <section class="container" id="overview">
+    <div class="card">
+      <h3>VedSAAS kya hai</h3>
+      <p><b>“Vedic Intelligence + Scientific AI”</b>, developed by <i>Shashwatam Eco-Chic Creations LLP</i>. Goal:</p>
+      <blockquote style="margin:8px 0 0">“Bharat ke sabhi logon ko apni bhasha me, apni sanskriti ke hisaab se ek AI dena jo unka teacher, advisor, aur saathi bane.”</blockquote>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="container" id="architecture">
+    <div class="card">
+      <h3>🧠 Core Architecture</h3>
+      <p>VedSAAS ka brain do engines par kaam karta hai. Beech me <b>Brain Controller</b> jo decide karta hai kis query ko kis engine me bhejna hai.</p>
+      <table class="table">
+        <thead><tr><th>Engine</th><th>Role</th><th>Function</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><b>Engine 1</b></td>
+            <td>Front reasoning brain</td>
+            <td>User se baat (Hindi/English/Hinglish), intent detect, quick answers; <span class="mono">wiki, intent.json, universal.json, main.json, tokens.db</span> se fetch.</td>
+          </tr>
+          <tr>
+            <td><b>Engine 2</b></td>
+            <td>Deep knowledge brain</td>
+            <td>Internet/docs/APIs se research; <i>self-learning</i> & background indexing (e.g., <span class="pill">granth</span>, <span class="pill">gov data</span>, <span class="pill">RSS</span>, <span class="pill">Wikipedia</span>).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Knowledge System -->
+  <section class="container" id="knowledge">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>📚 Knowledge System</h3>
+        <ol style="margin:0 0 6px 18px">
+          <li><b>main.json</b> — short definitions & quick facts</li>
+          <li><b>universal.json</b> — disambiguation & topic options</li>
+          <li><b>tokens.db</b> — detailed semantic knowledge (SQLite)</li>
+        </ol>
+        <p>Plus: <span class="mono">web_learn_and_answer()</span> se auto-learning & background healing.</p>
+      </div>
+      <div class="card">
+        <h3>🧩 Modules</h3>
+        <ul style="margin:0 0 0 18px">
+          <li><b>Gurukul</b> — NCERT aligned education</li>
+          <li><b>Krishi</b> — farmer-first guidance</li>
+          <li><b>Guardian</b> — parental & safety controls</li>
+          <li><b>Granth Pack</b> — Sanātani texts</li>
+          <li><b>Databank Sync</b> — S3 mirroring (index/latest)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>☁️ Infrastructure</h3>
+        <div class="kv"><div>Backend</div><div>Python (Flask + Waitress/Gunicorn)</div></div>
+        <div class="kv"><div>Frontend</div><div>React SPA (S3 + CloudFront)</div></div>
+        <div class="kv"><div>Deploy</div><div>AWS EC2, Systemd Blue/Green (8011/8012)</div></div>
+        <div class="kv"><div>CI/CD</div><div>GitHub Actions + OIDC</div></div>
+        <div class="kv"><div>Storage</div><div>S3 (vedsaas-data-prod)</div></div>
+        <div class="kv"><div>Domain</div><div>vedsaas.com / vedsaas.in</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container" id="features">
+    <div class="grid cols-3">
+      <div class="card"><h3>🌐 Multilingual</h3><p>Hindi, English & Hinglish understanding.</p></div>
+      <div class="card"><h3>🧠 Self-learning</h3><p>Auto-healing knowledge & background indexing.</p></div>
+      <div class="card"><h3>🖼 Proofcards</h3><p>PNG outputs for shareable answers.</p></div>
+      <div class="card"><h3>🔌 Plugins</h3><p>Tools & APIs via modular architecture.</p></div>
+      <div class="card"><h3>🛡 Bharat-first</h3><p>Offline/on-prem options with safety.</p></div>
+      <div class="card"><h3>🧍 Memory</h3><p>Human-like style context awareness.</p></div>
+    </div>
+  </section>
+
+  <!-- Vision -->
+  <section class="container" id="vision">
+    <div class="card">
+      <h3>🎯 Vision</h3>
+      <blockquote style="margin:8px 0 12px">
+        “AI that understands Bharat — not just English.”
+      </blockquote>
+      <p>Education, agriculture, governance, research — sab sectors me Indian context ke saath ek Bharat-centric digital intelligence layer.</p>
+      <p style="margin-top:10px">
+        <a class="btn" href="https://app.vedsaas.com/login.html">Start in App</a>
+        <a class="btn alt" href="/contact.html">Contact</a>
+      </p>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+  <script type="module" src="/bg.js"></script>
+</body>
+</html>
