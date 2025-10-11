@@ -1,0 +1,49 @@
+<!doctype html><html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VedSAAS — Shastra‑Augmented AI</title>
+<meta name="description" content="VedSAAS — Shastra‑Augmented AI for Bharat. Multilingual, privacy‑first.">
+<link rel="icon" href="/assets/img/favicon.png">
+<meta property="og:title" content="VedSAAS">
+<meta property="og:description" content="Shastra‑Augmented AI for Bharat.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.vedsaas.com/">
+<link rel="canonical" href="https://www.vedsaas.com/">
+<link rel="stylesheet" href="/ui/ved.css">
+<script type="module">
+  import {ready, include} from '/ui/ved.js';
+  ready(()=>{
+    include('#site-header','/partials/header.html');
+    include('#site-footer','/partials/footer.html');
+  });
+</script>
+
+<title>VedSAAS — Contact</title>
+<link rel="canonical" href="https://www.vedsaas.com/contact.html">
+</head><body>
+<header id="site-header"></header>
+
+<section class="container">
+  <h1>Contact</h1>
+  <div class="card" style="max-width:680px;margin:auto">
+    <form name="contact">
+      <label>Name</label><input name="name" required>
+      <label>Email</label><input type="email" name="email" required>
+      <label>Message</label><textarea name="msg" rows="5" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var form = document.forms['contact'];
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thanks! Please email us at support@vedsaas.com while we wire contact API.');
+  });
+});
+</script>
+</body></html>
