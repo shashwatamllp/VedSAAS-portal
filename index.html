@@ -5,34 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VedSAAS — Shastra-Augmented AI</title>
 <meta name="description" content="VedSAAS — Shastra-Augmented AI for Bharat. Multilingual, privacy-first.">
-<link rel="icon" href="./favicon.png">
+<link rel="icon" href="/favicon.png">
+<base href="/" />
 
-<!-- 🌌 Open Graph / SEO -->
+<!-- Open Graph -->
 <meta property="og:title" content="VedSAAS — Shastra-Augmented AI">
 <meta property="og:description" content="Built in Bharat, for the World. Wisdom + Speed with Gurukul & Krishi modes.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://console.vedsaas.com/assets/og_banner.png">
 <meta property="og:url" content="https://console.vedsaas.com/">
 <link rel="canonical" href="https://console.vedsaas.com/">
-<link rel="canonical" href="https://console.vedsaas.in/">
 
-<!-- 🌈 Center meta (visual alignment on preview) -->
-<style>
-  /* Optional center meta banner for visual balance */
-  .meta-center {
-    display:flex;justify-content:center;align-items:center;
-    text-align:center;flex-direction:column;
-    font-size:12px;color:#9aa9ff;margin:6px 0;
-  }
-</style>
+<!-- Twitter (optional) -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VedSAAS — Shastra-Augmented AI">
+<meta name="twitter:description" content="Built in Bharat, for the World. Wisdom + Speed with Gurukul & Krishi modes.">
+<meta name="twitter:image" content="https://console.vedsaas.com/assets/og_banner.png">
 
-<link rel="stylesheet" href="./ved.css">
+<link rel="stylesheet" href="/ved.css">
 
 <script type="module">
-  import { ready, include } from './ved.js';
+  import { ready, include } from '/ved.js';
   ready(() => {
-    include('#site-header','./header.html');
-    include('#site-footer','./footer.html');
+    include('#site-header','/header.html');
+    include('#site-footer','/footer.html');
   });
 </script>
 </head>
@@ -43,7 +39,7 @@
 
 <header id="site-header"></header>
 
-<!-- 🌌 Hero -->
+<!-- Hero -->
 <section class="hero">
   <div class="meta-center">
     <span>🔱 Shastra-Augmented Intelligence</span>
@@ -56,16 +52,22 @@
   </p>
 </section>
 
-<!-- 🌏 Feature Grid -->
+<!-- Feature Grid (cards now clickable) -->
 <section class="container" id="features">
   <div class="grid cols-3">
-    <div class="card"><h3>🧘 Gurukul</h3><p>NCERT-aligned learning with cultural context.</p></div>
-    <div class="card"><h3>🌾 Krishi</h3><p>Farmer-first guidance with local info.</p></div>
-    <div class="card"><h3>🛡 Guardian</h3><p>Safe-by-default filters and family controls.</p></div>
+    <a class="card" href="/gurukul/">
+      <h3>🧘 Gurukul</h3><p>NCERT-aligned learning with cultural context.</p>
+    </a>
+    <a class="card" href="/krishi/">
+      <h3>🌾 Krishi</h3><p>Farmer-first guidance with local info.</p>
+    </a>
+    <a class="card" href="/guardian/">
+      <h3>🛡 Guardian</h3><p>Safe-by-default filters and family controls.</p>
+    </a>
   </div>
 </section>
 
-<!-- 🔎 Why VedSAAS -->
+<!-- Why / Get started -->
 <section class="container">
   <div class="grid cols-2">
     <div class="card">
@@ -85,6 +87,14 @@
 <footer id="site-footer"></footer>
 
 <!-- cosmic background script -->
-<script type="module" src="./bg.js"></script>
+<script type="module" src="/bg.js"></script>
+<noscript><div style="padding:12px;text-align:center;color:#cfe3ff">
+  For the cosmic background and interactive header, please enable JavaScript.
+</div></noscript>
+
+<!-- page-only style used by meta-center -->
+<style>
+.meta-center{display:flex;justify-content:center;align-items:center;text-align:center;flex-direction:column;font-size:12px;color:#9aa9ff;margin:6px 0}
+</style>
 </body>
 </html>
