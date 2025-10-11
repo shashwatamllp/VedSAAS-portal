@@ -1,0 +1,34 @@
+<!doctype html><html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{TITLE}} — VedSAAS</title>
+  <base href="/" />
+  <link rel="icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/ved.css" />
+  <script type="module">
+    import { ready, include } from "/ved.js";
+    ready(()=>{ include("#site-header","/header.html"); include("#site-footer","/footer.html"); });
+  </script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header id="site-header"></header>
+
+  <section class="hero">
+    <span class="badge">{{EMOJI}} Shastra-Augmented</span>
+    <h1>{{TITLE}}</h1>
+    <p>{{BLURB}}</p>
+    <p><a class="btn" href="https://app.vedsaas.com/login.html">Open App</a></p>
+  </section>
+
+  <section class="container">
+    <div class="card">
+      <h3>Overview</h3>
+      <p>Welcome to <b>{{TITLE}}</b>. Edit content in <code>manager/subdomains.yaml</code> or add custom sections in <code>{{KEY}}/index.html</code> after generation.</p>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+  <script type="module" src="/bg.js"></script>
+</body></html>
