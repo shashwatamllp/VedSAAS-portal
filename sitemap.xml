@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 🌐 Main Domain -->
   <url><loc>https://www.vedsaas.com/</loc></url>
   <url><loc>https://www.vedsaas.com/pricing.html</loc></url>
   <url><loc>https://www.vedsaas.com/contact.html</loc></url>
   <url><loc>https://www.vedsaas.com/privacy.html</loc></url>
   <url><loc>https://www.vedsaas.com/terms.html</loc></url>
+
+  <!-- 🧭 Console Portal -->
+  <url><loc>https://console.vedsaas.com/</loc></url>
+  <url><loc>https://console.vedsaas.com/about.html</loc></url>
+  <url><loc>https://console.vedsaas.com/pricing.html</loc></url>
+  <url><loc>https://console.vedsaas.com/contact.html</loc></url>
+  <url><loc>https://console.vedsaas.com/privacy.html</loc></url>
+  <url><loc>https://console.vedsaas.com/terms.html</loc></url>
+  <url><loc>https://console.vedsaas.com/gurukul/</loc></url>
+  <url><loc>https://console.vedsaas.com/krishi/</loc></url>
+  <url><loc>https://console.vedsaas.com/guardian/</loc></url>
+
+  <!-- 📚 Knowledge / Docs -->
+  <url><loc>https://docs.vedsaas.com/</loc></url>
+  <url><loc>https://wiki.vedsaas.com/</loc></url>
+  <url><loc>https://kb.vedsaas.com/</loc></url>
+
+  <!-- 🧠 AI + API -->
+  <url><loc>https://ai.vedsaas.com/</loc></url>
+  <url><loc>https://api.vedsaas.com/</loc></url>
+  <url><loc>https://auth.vedsaas.com/</loc></url>
+
+  <!-- 📰 Other subdomains -->
+  <url><loc>https://blog.vedsaas.com/</loc></url>
+  <url><loc>https://careers.vedsaas.com/</loc></url>
+  <url><loc>https://help.vedsaas.com/</loc></url>
+  <url><loc>https://status.vedsaas.com/</loc></url>
+  <url><loc>https://admin.vedsaas.com/</loc></url>
+  <url><loc>https://files.vedsaas.com/</loc></url>
+
+  <!-- 🌾 Specialized portals -->
+  <url><loc>https://gurukul.vedsaas.com/</loc></url>
+  <url><loc>https://krishi.vedsaas.com/</loc></url>
+  <url><loc>https://guardian.vedsaas.com/</loc></url>
+  <url><loc>https://parents.vedsaas.com/</loc></url>
+
+  <!-- 🔒 Secure mail & MTA -->
+  <url><loc>https://mta.sts.vedsaas.com/</loc></url>
+
 </urlset>
