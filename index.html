@@ -13,10 +13,8 @@
 <meta property="og:url" content="https://console.vedsaas.com/">
 <link rel="canonical" href="https://console.vedsaas.com/">
 
-<!-- CSS -->
 <link rel="stylesheet" href="./ved.css">
 
-<!-- JS -->
 <script type="module">
   import { ready, include } from './ved.js';
   ready(() => {
@@ -27,6 +25,9 @@
 </head>
 
 <body>
+<!-- cosmic background -->
+<canvas id="bg"></canvas>
+
 <header id="site-header"></header>
 
 <section class="hero">
@@ -64,5 +65,8 @@
 </section>
 
 <footer id="site-footer"></footer>
+
+<!-- cosmic background script -->
+<script type="module" src="./bg.js"></script>
 </body>
 </html>
