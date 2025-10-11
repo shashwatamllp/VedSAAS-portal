@@ -1,37 +1,55 @@
-<!doctype html><html><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VedSAAS — Shastra‑Augmented AI</title>
-<meta name="description" content="VedSAAS — Shastra‑Augmented AI for Bharat. Multilingual, privacy‑first.">
-<link rel="icon" href="/assets/img/favicon.png">
-<meta property="og:title" content="VedSAAS">
-<meta property="og:description" content="Shastra‑Augmented AI for Bharat.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.vedsaas.com/">
-<link rel="canonical" href="https://www.vedsaas.com/">
-<link rel="stylesheet" href="/ui/ved.css">
-<script type="module">
-  import {ready, include} from '/ui/ved.js';
-  ready(()=>{
-    include('#site-header','/partials/header.html');
-    include('#site-footer','/partials/footer.html');
-  });
-</script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pricing — VedSAAS</title>
+  <link rel="icon" href="/favicon.png" />
+  <link rel="stylesheet" href="/ved.css" />
+  <script type="module">
+    import { ready, include } from "/ved.js";
+    ready(() => {
+      include("#site-header", "/header.html");
+      include("#site-footer", "/footer.html");
+    });
+  </script>
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <header id="site-header"></header>
 
-<title>VedSAAS — Pricing</title>
-<link rel="canonical" href="https://www.vedsaas.com/pricing.html">
-</head><body>
-<header id="site-header"></header>
+  <section class="hero">
+    <span class="badge">Simple, transparent</span>
+    <h1>Pricing</h1>
+    <p>Start free. Upgrade when you need more.</p>
+  </section>
 
-<section class="container">
-  <h1>Pricing</h1>
-  <div class="grid cols-3" style="margin-top:16px">
-    <div class="card"><h3>Free</h3><p>Basic access</p><p><b>₹0</b>/mo</p></div>
-    <div class="card"><h3>Pro</h3><p>Gurukul + Krishi</p><p><b>₹199</b>/mo</p></div>
-    <div class="card"><h3>Family</h3><p>Guardian controls</p><p><b>₹299</b>/mo</p></div>
-  </div>
-  <p style="margin-top:18px"><a class="btn" href="https://app.vedsaas.com/login.html">Start Now</a></p>
-</section>
+  <section class="container">
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>Free</h3>
+        <p>Basic access</p>
+        <h2>₹0<span style="font-size:14px">/mo</span></h2>
+        <button class="btn" onclick="location.href='https://app.vedsaas.com/login.html'">Start Now</button>
+      </div>
 
-<footer id="site-footer"></footer>
-</body></html>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>Gurukul + Krishi</p>
+        <h2>₹199<span style="font-size:14px">/mo</span></h2>
+        <button class="btn" onclick="location.href='https://app.vedsaas.com/login.html'">Start Now</button>
+      </div>
+
+      <div class="card">
+        <h3>Family</h3>
+        <p>Guardian controls</p>
+        <h2>₹299<span style="font-size:14px">/mo</span></h2>
+        <button class="btn" onclick="location.href='https://app.vedsaas.com/login.html'">Start Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="site-footer"></footer>
+  <script type="module" src="/bg.js"></script>
+</body>
+</html>
