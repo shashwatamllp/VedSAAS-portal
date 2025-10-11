@@ -1,1 +1,13 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VedSAAS • Authentication</title><meta name="description" content="OTP login, device binding, and family controls.">
+<link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/ved.css">
+<script type="module">import{ready,include}from'/ved.js';ready(()=>{include('#site-header','/header.html');include('#site-footer','/footer.html');});</script>
+</head><body><canvas id="bg"></canvas><header id="site-header"></header>
+<section class="hero"><span class="badge">Identity</span><h1>Simple, Secure Sign-in</h1><p>OTP login with secure cookies; Guardian for families.</p>
+<p><a class="btn" href="https://auth.vedsaas.com">Open Auth →</a> <a class="btn alt" href="/">Home</a></p></section>
+<section class="container"><div class="grid cols-3">
+<div class="card"><h3>Cookies</h3><p>HttpOnly; Secure; SameSite=None; Domain=.vedsaas.com</p></div>
+<div class="card"><h3>Roles</h3><p>user / admin (JWT claims)</p></div>
+<div class="card"><h3>Recovery</h3><p>Magic link & device binding</p></div>
+</div></section><footer id="site-footer"></footer><script type="module" src="/bg.js"></script></body></html>
 
