@@ -1,28 +1,36 @@
-<!doctype html><html><head>
+<!doctype html>
+<html lang="en">
+<head> 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VedSAAS — Shastra‑Augmented AI</title>
-<meta name="description" content="VedSAAS — Shastra‑Augmented AI for Bharat. Multilingual, privacy‑first.">
-<link rel="icon" href="/assets/img/favicon.png">
+<title>VedSAAS — Shastra-Augmented AI</title>
+<meta name="description" content="VedSAAS — Shastra-Augmented AI for Bharat. Multilingual, privacy-first.">
+<link rel="icon" href="./favicon.png">
+
 <meta property="og:title" content="VedSAAS">
-<meta property="og:description" content="Shastra‑Augmented AI for Bharat.">
+<meta property="og:description" content="Shastra-Augmented AI for Bharat.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://www.vedsaas.com/">
-<link rel="canonical" href="https://www.vedsaas.com/">
-<link rel="stylesheet" href="/ui/ved.css">
+<meta property="og:url" content="https://console.vedsaas.com/">
+<link rel="canonical" href="https://console.vedsaas.com/">
+
+<!-- CSS -->
+<link rel="stylesheet" href="./ved.css">
+
+<!-- JS -->
 <script type="module">
-  import {ready, include} from '/ui/ved.js';
-  ready(()=>{
-    include('#site-header','/partials/header.html');
-    include('#site-footer','/partials/footer.html');
+  import { ready, include } from './ved.js';
+  ready(() => {
+    include('#site-header','./header.html');
+    include('#site-footer','./footer.html');
   });
 </script>
+</head>
 
-</head><body>
+<body>
 <header id="site-header"></header>
 
 <section class="hero">
-  <span class="badge">Shastra‑Augmented AI</span>
+  <span class="badge">Shastra-Augmented AI</span>
   <h1>Built in Bharat, for the World</h1>
   <p>Wisdom + Speed. Multilingual answers with Gurukul & Krishi modes.</p>
   <p>
@@ -33,9 +41,9 @@
 
 <section class="container" id="features">
   <div class="grid cols-3">
-    <div class="card"><h3>🧘 Gurukul</h3><p>NCERT‑aligned learning with cultural context.</p></div>
-    <div class="card"><h3>🌾 Krishi</h3><p>Farmer‑first guidance with local info.</p></div>
-    <div class="card"><h3>🛡 Guardian</h3><p>Safe‑by‑default filters and family controls.</p></div>
+    <div class="card"><h3>🧘 Gurukul</h3><p>NCERT-aligned learning with cultural context.</p></div>
+    <div class="card"><h3>🌾 Krishi</h3><p>Farmer-first guidance with local info.</p></div>
+    <div class="card"><h3>🛡 Guardian</h3><p>Safe-by-default filters and family controls.</p></div>
   </div>
 </section>
 
@@ -44,8 +52,8 @@
     <div class="card">
       <h3>Why VedSAAS?</h3>
       <div class="kv"><div>Languages</div><div>Hindi + English (more coming)</div></div>
-      <div class="kv"><div>Engines</div><div>Dual‑engine brain with knowledge packs</div></div>
-      <div class="kv"><div>Privacy</div><div>Account‑controlled data</div></div>
+      <div class="kv"><div>Engines</div><div>Dual-engine brain with knowledge packs</div></div>
+      <div class="kv"><div>Privacy</div><div>Account-controlled data</div></div>
     </div>
     <div class="card">
       <h3>Get started</h3>
@@ -56,4 +64,5 @@
 </section>
 
 <footer id="site-footer"></footer>
-</body></html>
+</body>
+</html>
