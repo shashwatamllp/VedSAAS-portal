@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head> 
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VedSAAS — Shastra-Augmented AI</title>
@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://console.vedsaas.com/">
 <link rel="canonical" href="https://console.vedsaas.com/">
 
-<!-- Twitter (optional) -->
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VedSAAS — Shastra-Augmented AI">
 <meta name="twitter:description" content="Built in Bharat, for the World. Wisdom + Speed with Gurukul & Krishi modes.">
@@ -41,18 +41,17 @@
 
 <!-- Hero -->
 <section class="hero">
-  <div class="meta-center">
-    <span>🔱 Shastra-Augmented Intelligence</span>
-  </div>
+  <div class="meta-center"><span>🔱 Shastra-Augmented Intelligence</span></div>
   <h1>Built in Bharat, for the World</h1>
   <p>Wisdom + Speed. Multilingual answers with Gurukul & Krishi modes.</p>
   <p>
     <a class="btn" href="https://app.vedsaas.com/login.html">Start in App →</a>
     <a class="btn alt" href="#features">Explore Features</a>
+    <a class="btn alt" href="#ved-console">Open Console</a>
   </p>
 </section>
 
-<!-- Feature Grid (cards now clickable) -->
+<!-- Feature Grid -->
 <section class="container" id="features">
   <div class="grid cols-3">
     <a class="card" href="/gurukul/">
@@ -67,21 +66,11 @@
   </div>
 </section>
 
-<!-- Why / Get started -->
-<section class="container">
-  <div class="grid cols-2">
-    <div class="card">
-      <h3>Why VedSAAS?</h3>
-      <div class="kv"><div>Languages</div><div>Hindi + English (more coming)</div></div>
-      <div class="kv"><div>Engines</div><div>Dual-engine brain with knowledge packs</div></div>
-      <div class="kv"><div>Privacy</div><div>Account-controlled data</div></div>
-    </div>
-    <div class="card">
-      <h3>Get started</h3>
-      <p>Open the app, login with OTP, and access your dashboard.</p>
-      <p><a class="btn" href="https://app.vedsaas.com/login.html">13.202.109.73</a></p>
-    </div>
-  </div>
+<!-- VedSAAS Studio (AWS-style sections, local-only) -->
+<section class="container" id="ved-console">
+  <h2 style="margin:0 0 8px 0">VedSAAS Studio</h2>
+  <p style="margin:0 0 16px 0">Local-first ML console: Studio, Canvas, RStudio, Notebooks, Partner Apps, JumpStart, Governance, HyperPod, Ground Truth, Processing, Training, Training Plans, Inference.</p>
+  <div id="console-grid" class="grid cols-3"></div>
 </section>
 
 <footer id="site-footer"></footer>
@@ -92,9 +81,53 @@
   For the cosmic background and interactive header, please enable JavaScript.
 </div></noscript>
 
-<!-- page-only style used by meta-center -->
+<!-- page-only style -->
 <style>
 .meta-center{display:flex;justify-content:center;align-items:center;text-align:center;flex-direction:column;font-size:12px;color:#9aa9ff;margin:6px 0}
+#ved-console .card h3{margin-bottom:6px}
 </style>
+
+<!-- Console sections loader -->
+<script>
+(async function(){
+  const grid = document.getElementById('console-grid');
+  const bullets = {
+    studio: ["Fully-managed notebook instances","One-click training"],
+    canvas: ["Docs & experiments","Team notes"],
+    rstudio: ["R workflows","Data viz"],
+    notebooks: ["Search & versioning","Share links"],
+    partner_apps: ["Curated integrations","Single sign-on"],
+    jumpstart: ["Templates","Best-practice configs"],
+    governance: ["Model cards","Audit log"],
+    hyperpod: ["GPU node registry","Utilization"],
+    ground_truth: ["Labeling with active learning","Highly accurate training datasets"],
+    processing: ["Batch pipelines","Artifacts"],
+    training: ["Highly-optimized ML algorithms","HP presets"],
+    training_plans: ["Saved recipes","Repro runs"],
+    inference: ["Deployment without engineering effort","Endpoint registry"]
+  };
+
+  try{
+    const r = await fetch('/api/console/sections', {cache:'no-store'});
+    const j = await r.json();
+    const sections = j.sections || [];
+    grid.innerHTML = sections.map(s => {
+      const list = (bullets[s.key]||[]).map(x=>`<li class="text-sm">• ${x}</li>`).join('');
+      return `
+        <a class="card" href="#/console/${s.key}">
+          <h3>${s.title}</h3>
+          <ul class="space-y-1">${list}</ul>
+        </a>
+      `;
+    }).join('');
+  }catch(e){
+    grid.innerHTML = `
+      <div class="card">
+        <h3>Console Unavailable</h3>
+        <p>API not reachable. Try again or check backend at <code>/api/console/sections</code>.</p>
+      </div>`;
+  }
+})();
+</script>
 </body>
 </html>
